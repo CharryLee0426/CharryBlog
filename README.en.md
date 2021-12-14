@@ -20,7 +20,8 @@ You can visit it through `localhost:8080/`
 
 #### Instructions
 
-1. Run on port 8080
+1. Run on port 8080 
+(if you don't change default server port in `application.yml` )
 2. Create a record at the table t_user as your admin
 3. Alter the attribute content's data-type 
 at t_blog and t_comment to 'longtext', or you can only

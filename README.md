@@ -19,7 +19,7 @@
 
 #### 使用说明
 
-1. 运行在 8080 端口上
+1. 运行在 8080 端口上（如果你未修改 `application.yml` 中的服务器端口设置）
 2. 需要在数据库中的 t_user 表创建用户记录作为管理员。
 3. 需要将 t_comment, t_blog 中的 content 属性修改为 longtext，否则只能存储 255 字符的内容。
 4. 上传图片需要将图片的 url 上传，文内图片支持 markdown 语法，仅支持通过 url 上传，这里推荐聚合图床 [http://www.superbed.cn](http://www.superbed.cn)
