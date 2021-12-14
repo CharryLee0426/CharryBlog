@@ -1,36 +1,37 @@
 # Lichen_Blog
 
 #### Description
-一个具有后台管理页面，可在线上传文章的博客系统。
+A Blog system that contains an administration page. 
+You can uploud blogs online but not during ssh client.
 
 #### Software Architecture
-Software architecture description
+A standard SpringBoot project.
 
 #### Installation
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. git clone
+2. open the project and solve dependency problem by maven.
+3. edit `/src/application.yml`, 
+you must change MySQL's username and password to your own.
+4. Create database name 'blog' in your MySQL.
+5. Build and Run the Project at BlogApplication. 
+You can visit it through `localhost:8080/`
+(if you don't change server port.)
 
 #### Instructions
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. Run on port 8080
+2. Create a record at the table t_user as your admin
+3. Alter the attribute content's data-type 
+at t_blog and t_comment to 'longtext', or you can only
+store 255 chars in a record.
+4. Only can update the picture's url to the system, support markdown syntax.
+I recommand the 'superbed.cn' [http://www.superbed.cn](http://www.superbed.cn) 
+as your Picbed.
 
 #### Contribution
 
 1.  Fork the repository
-2.  Create Feat_xxx branch
+2.  Create branch
 3.  Commit your code
 4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
