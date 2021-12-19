@@ -178,3 +178,47 @@ git push origin --delete branchname
 ```
 
 删除远程仓库的分支
+
+### 12. 一些在使用过程中补充的问题
+
+### 1. git 的工作流程
+
+![](https://pic.imgdb.cn/item/61b9d4cf2ab3f51d9168a582.png)
+
+```mermaid
+graph LR
+
+b--Pull Request-->a
+a--fork-->b
+c["local/repo"]
+d["local/repo"]
+b--git clone-->c
+c--"origin"-->b
+d--upstream-->a
+a--git pull-->d
+subgraph github
+a["dalao/repo"]
+b["you/repo"]
+end
+```
+
+如图，一般情况下，默认自己为参与者，可以将 git 的流程看成三个仓库，`dalao/repo`, `you/repo`, `local/repo`。fork 不是原生 git 的概念，可以将 fork 当成是 GitHub 服务器上的 git clone。所以在本地项目中要参与其他人的项目（没有被认证为 contributor），不能直接向上游推 commit。而是要先推上自己的项目。然后向上游提交 Pull Request（这通常由）。由上游仓库的管理员决定是否接受你的 Pull Request。所以一般的项目要设置两个远程仓库，通过以下命令添加：
+
+```bash
+git remote add origin you/repo.git	# 设置 github 端的源为自己 fork 仓库的 URL
+git remote add upstream dalao/repo.git # 设置 github 端的上游为创始者仓库的 URL
+```
+
+#### 2. 为什么 git pull 不能将自己在本地删除的文件恢复
+
+因为 git pull 会保存自己在本地的修改，而另外一个命令 `git reset` 可以将仓库完全重置到远程仓库的某一次 commit 上，并且不会保留自己的修改。
+
+例如，在本地，仓库中有两个 commits，A 和 B，在远程仓库中有两个 commit，A 和 C。这样的话执行如下命令
+
+```bash
+git pull
+# A, B, C
+git reset
+# A, C
+```
+
