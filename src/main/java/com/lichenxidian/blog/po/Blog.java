@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author lichen
+ * @date 2022-01-09
+ * @description 实体类-博客，用来存放博客内容*/
 @Entity
 @Table(name = "t_blog")
 public class Blog {

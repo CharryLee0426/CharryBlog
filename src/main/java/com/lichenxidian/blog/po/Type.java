@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author lichen
+ * @date 2022-01-09
+ * @description 实体类-类别，和博客是一对多的关系*/
 @Entity
 @Table(name = "t_type")
 public class Type {

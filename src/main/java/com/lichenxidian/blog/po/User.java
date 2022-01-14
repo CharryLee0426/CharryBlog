@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author lichen
+ * @date 2022-10-02
+ * @description 实体类-用户，和博客有一对多的关系*/
 @Entity
 @Table(name = "t_user")
 public class User {

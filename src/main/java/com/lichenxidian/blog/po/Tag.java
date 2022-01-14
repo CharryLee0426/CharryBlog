@@ -4,6 +4,10 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author lichen
+ * @date 2022-01-09
+ * @description 实体类-标签，和博客是多对多的关系*/
 @Entity
 @Table(name = "t_tag")
 public class Tag {

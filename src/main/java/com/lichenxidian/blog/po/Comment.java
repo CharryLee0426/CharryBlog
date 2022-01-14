@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author lichen
+ * @date 2022-01-09
+ * @description 实体类-评论，注意这里内部的一对多关系
+ *              本质上，评论是一个树*/
 @Entity
 @Table(name = "t_comment")
 public class Comment {
