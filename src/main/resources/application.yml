@@ -1,0 +1,22 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/Blog
+    username: root
+    password: Lc15503539901
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    com.lichenxidian.blog: debug
+  file:
+    name: blog.log
+
+comment.avatar: /images/guestavatar.png
