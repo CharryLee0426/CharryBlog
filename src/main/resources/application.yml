@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/Blog
     username: root
-    password: Lc15503539901
+    password: yourpassword
 
   jpa:
     hibernate:
